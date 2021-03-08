@@ -224,3 +224,5 @@ while playmenu:
     else:
       print(Red+'Invalid DEATH Command!'+White)
       next()
+
+#im already done. literally.
