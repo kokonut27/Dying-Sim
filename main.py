@@ -237,7 +237,53 @@ while playmenu:
         print("Pay 10 deaths, and 1 chance to spin the wheel. You might get a prize or you might flunk. Your choice. lol")
         next()
       elif wd == '1':
-        wheel_list = ['']
+        yn = input("Will you pay 10 deaths and 1 chance? y/n\n☠️️️️ > ").lower()
+        clear()
+
+        if yn == 'y':
+          if deaths >= 10 and chance >= 1:
+            deaths-=10
+            chance-=1
+            wheel_list = [1,2,3,4,5,6,7]
+            abc = random.choice(wheel_list)
+            print("Spinning...")
+            time.sleep(2)
+            print()
+            if abc == 1:
+              print(Green+"You got 20 deaths!"+White)
+              next()
+              deaths+=20
+            elif abc == 2:
+              print(Green+"You lost 25 deaths!"+White)
+              next()
+              deaths-=25
+            elif abc == 3:
+              print(Green+"You got 3 chances!"+White)
+              next()
+              chance+=3
+            elif abc == 4:
+              print(Green+"You lost 4 chances!"+White)
+              next()
+              chance-=4
+            elif abc == 5:
+              print(Green+"You lost 2 bonus"+White)
+              next()
+              bonus-=2
+            elif abc == 6:
+              print(Green+"You lost 10 deaths!"+White)
+              next()
+              deaths-=10
+            else:
+              print(Green+"You got 6 bonus!"+White)
+              next()
+              bonus+=6
+          else:
+            print(Red+"You don't have enough deaths and chances!"+White)
+            next()
+        elif yn == 'n':
+          pass
+        else:
+          pass
 
     
     else:
