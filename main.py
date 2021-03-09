@@ -1,4 +1,3 @@
-#maybe last project? idk
 import time, os, getkey, random
 #from replit import db
 #import json, pickle
@@ -70,7 +69,7 @@ while menu1:
   
   elif menu1e == '2':
     print(Red+'DEATH HELP!'+White)
-    print('Basically, this is a clicker game, you have to keep dying, get upgrades, and etc. You also start with 1 death')#add
+    print('Basically, this is a clicker game, you have to keep dying, get upgrades, and etc. You also start with 1 death. Another note is that you have to reach 777 deaths, 777 rebirths, and 777 bonus!')#add
     next()
 
   else:
@@ -80,12 +79,17 @@ while menu1:
 while playmenu:
   if deaths <= 0:
     print(Red+"You lived, so you died. (confusing, right?) Bai Bai.")
-    time.sleep(2)
+    time.sleep(4)
+    clear()
+    playmenu=False
+  elif deaths == 777 and chance == 777 and bonus == 777:
+    print(Green+"You won! Hooray! Share this message: 'This Sucks!' in the comments! lol. Bai!"+White)
+    time.sleep(4)
     clear()
     playmenu=False
   else:
     print(Red+'DEATH PLAY MENU!'+White)
-    print('[1] Try to die\n[2] Try to live\n[3] Click this and become pog\n[4] View ur Stats')
+    print('[1] Try to die\n[2] Try to live\n[3] Click this and become pog\n[4] View ur Stats\n[5] Spin da wheel of deaths')
     a=input(Red+'☠️️️️ > '+White)
     clear()
 
@@ -220,6 +224,21 @@ while playmenu:
       else:
         print(f"Ur stats are:\n- {deaths} Deaths\n- {chance} Chances/Rebirths\n- {bonus} Bonus")
         next()
+    
+    elif a == '5':
+      print(Red+"Da Wheel of Deaths!"+White)
+      print("[1] Spin da wheel\n[2] Help\n[3] Back")
+      wd = input("☠️️️️ > ")
+      clear()
+
+      if wd == '3':
+        pass
+      elif wd == '2':
+        print("Pay 10 deaths, and 1 chance to spin the wheel. You might get a prize or you might flunk. Your choice. lol")
+        next()
+      elif wd == '1':
+        wheel_list = ['']
+
     
     else:
       print(Red+'Invalid DEATH Command!'+White)
