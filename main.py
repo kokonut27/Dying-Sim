@@ -66,7 +66,7 @@ while menu1:
   if menu1e == '1':
     playmenu=True
     menu1=False
-  
+
   elif menu1e == '2':
     print(Red+'DEATH HELP!'+White)
     print('Basically, this is a clicker game, you have to keep dying, get upgrades, and etc. You also start with 1 death. Another note is that you have to reach 777 deaths, 777 rebirths, and 777 bonus!')#add
@@ -99,13 +99,13 @@ while playmenu:
       print(f"You died {NUM} times! That is WITH the bonus (whether or not you have a bonus lol)")
       deaths += NUM
       next()
-    
+
     elif a == '2':
       print("You rebirthed.\nStupid idea btw, you have to DIE in this game. +10 lives (lol)\nBut you got +1 chance")#not actually too stupid, but yea
       deaths -= 10
       chance += 1
       next()
-    
+
     elif a == '3':
       print("Will you use ur chance? y/n")
       yn = input('> ').lower()
@@ -115,116 +115,79 @@ while playmenu:
         if thingy == 1:
           if chance >= 1:
             print("You used your chance and you get a small bonus of deaths")
-            time.sleep(2)
-            clear()
             chance -= 1
             bonus += 2
             thingy += 1
           else:
             print(Red+"You don't have enough chance/rebirths!"+White)
-            time.sleep(2)
-            clear()
         elif thingy == 2:
           if chance >= 2:
             print("You used your chance and you get a small bonus of deaths")
-            time.sleep(2)
-            clear()
             chance -= 2
             bonus += 2
             thingy += 1
           else:
             print(Red+"You don't have enough chance/rebirths!"+White)
-            time.sleep(2)
-            clear()
         elif thingy == 3:
           if chance >= 3:
             print("You used your chance and you get a small bonus of deaths")
-            time.sleep(2)
-            clear()
             chance -= 3
             bonus += 2
             thingy += 1
           else:
             print(Red+"You don't have enough chance/rebirths!"+White)
-            time.sleep(2)
-            clear()
         elif thingy == 4:
           if chance >= 4:
             print("You used your chance and you get a small bonus of deaths")
-            time.sleep(2)
-            clear()
             chance -= 4
             bonus += 2
             thingy += 1
           else:
             print(Red+"You don't have enough chance/rebirths!"+White)
-            time.sleep(2)
-            clear()
         elif thingy == 5:
           if chance >= 5:
             print("You used your chance and you get a small bonus of deaths")
-            time.sleep(2)
-            clear()
             chance -= 5
             bonus += 2
             thingy += 1
           else:
             print(Red+"You don't have enough chance/rebirths!"+White)
-            time.sleep(2)
-            clear()
         elif thingy == 6:
           if chance >= 6:
             print("You used your chance and you get a small bonus of deaths")
-            time.sleep(2)
-            clear()
             chance -= 6
             bonus += 2
             thingy += 1
           else:
             print(Red+"You don't have enough chance/rebirths!"+White)
-            time.sleep(2)
-            clear()
         elif thingy == 7:
           if chance >= 7:
             print("You used your chance and you get a small bonus of deaths")
-            time.sleep(2)
-            clear()
             chance -= 7
             bonus += 2
             thingy += 1
           else:
             print(Red+"You don't have enough chance/rebirths!"+White)
-            time.sleep(2)
-            clear()
+        elif chance >= 7:
+          print("You used your chance and you get a small bonus of deaths")
+          chance -= 7
+          bonus += 2
+          thingy += 2
         else:
-          if chance >= 7:
-            print("You used your chance and you get a small bonus of deaths")
-            time.sleep(2)
-            clear()
-            chance -= 7
-            bonus += 2
-            thingy += 2
-          else:
-            print(Red+"You don't have enough chance/rebirths!"+White)
-            time.sleep(2)
-            clear()
-      
+          print(Red+"You don't have enough chance/rebirths!"+White)
+        time.sleep(2)
+        clear()
       elif yn == 'n':
         print("Ok. Going back to menu...")
         time.sleep(2)
         clear()
 
-      else:
-        pass
-
     elif a == '4':
       if deaths == 1:
         print(f"Ur stats are:\n- {deaths} Death\n- {chance} Chances/Rebirths\n- {bonus} Bonus")
-        next()
       else:
         print(f"Ur stats are:\n- {deaths} Deaths\n- {chance} Chances/Rebirths\n- {bonus} Bonus")
-        next()
-    
+      next()
     elif a == '5':
       print(Red+"Da Wheel of Deaths!"+White)
       print("[1] Spin da wheel\n[2] Help\n[3] Back")
@@ -251,41 +214,28 @@ while playmenu:
             print()
             if abc == 1:
               print(Green+"You got 20 deaths!"+White)
-              next()
               deaths+=20
             elif abc == 2:
               print(Green+"You lost 25 deaths!"+White)
-              next()
               deaths-=25
             elif abc == 3:
               print(Green+"You got 3 chances!"+White)
-              next()
               chance+=3
             elif abc == 4:
               print(Green+"You lost 4 chances!"+White)
-              next()
               chance-=4
             elif abc == 5:
               print(Green+"You lost 2 bonus"+White)
-              next()
               bonus-=2
             elif abc == 6:
               print(Green+"You lost 10 deaths!"+White)
-              next()
               deaths-=10
             else:
               print(Green+"You got 6 bonus!"+White)
-              next()
               bonus+=6
           else:
             print(Red+"You don't have enough deaths and chances!"+White)
-            next()
-        elif yn == 'n':
-          pass
-        else:
-          pass
-
-    
+          next()
     else:
       print(Red+'Invalid DEATH Command!'+White)
       next()
